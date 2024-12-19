@@ -1,23 +1,20 @@
 "use strict";
 // --------------Defining a variable in TypeScript-----------------------
-const x = 1;
-console.log(x);
-function hello(name) {
-    console.log(`hello ${name}`);
-}
-hello('Niraj');
-function sum(a, b) {
-    return a + b;
-}
-const value = sum(1, 2);
-console.log(value);
-function isAge(age) {
-    if (age > 18) {
-        return true;
+// const x: number = 1;
+// console.log(x);
+function isLegal(user) {
+    if (user.age > 18) {
+        console.log("Adult");
     }
     else {
-        return false;
+        console.log("Not Adult");
     }
 }
-console.log(isAge(18));
-// --------------
+function greet(user) {
+    console.log("hi there " + user.firstName);
+}
+isLegal({
+    firstName: "Niraj",
+    lastName: "Gupta",
+    age: 20
+});
