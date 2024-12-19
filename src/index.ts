@@ -22,23 +22,36 @@
 // }
 // console.log(isAge(18));
 // ---------------------Interfaces-----------------------------------
-interface User {
+// interface User {
+//     firstName: String;
+//     lastName: String;
+//     age: number;
+// }
+// function isLegal(user: User) {
+//     if (user.age > 18) {
+//         console.log("Adult");
+//     } else {
+//         console.log("Not Adult");
+//     }
+// }
+// function greet(user: User) {
+//     console.log("hi there " + user.firstName);
+// }
+// isLegal({
+//     firstName: "Niraj",
+//     lastName: "Gupta",
+//     age: 20
+// });
+// ------------------------Types----------------------------------------
+type User = {
     firstName: String;
     lastName: String;
     age: number;
 }
-function isLegal(user: User) {
-    if (user.age > 18) {
-        console.log("Adult");
-    } else {
-        console.log("Not Adult");
-    }
-}
-function greet(user: User) {
-    console.log("hi there " + user.firstName);
-}
-isLegal({
-    firstName: "Niraj",
-    lastName: "Gupta",
-    age: 20
-});
+
+type StringOrNumber = String | Number;
+function printId(id: StringOrNumber) {
+    console.log(id);
+}  
+printId(113);
+printId("113");
