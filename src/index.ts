@@ -56,13 +56,28 @@
 // printId(113);
 // printId("113");
 // -----------------------------Arrays In TS-------------------------------
-function maxValue(arr: number[]) {
-    let max = 0;
-    for (let i = 0; i < arr.length; i++){
-        if (arr[i] > max) {
-            max = arr[i];
-        }
-    }
-    return max;
+// function maxValue(arr: number[]) {
+//     let max = 0;
+//     for (let i = 0; i < arr.length; i++){
+//         if (arr[i] > max) {
+//             max = arr[i];
+//         }
+//     }
+//     return max;
+// }
+// console.log(maxValue([1, 2, 3]));
+// -----------------------------Enums--------------------------------------
+enum Direction {
+    Up,
+    Down,
+    Left,
+    Right
 }
-console.log(maxValue([1, 2, 3]));
+
+function doSomething(keyPressed: Direction) {
+    if (keyPressed == Direction.Up) {
+        
+    }
+}
+doSomething(Direction.Up);
+doSomething(Direction.Down);    
