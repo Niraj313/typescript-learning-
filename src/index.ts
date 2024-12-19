@@ -43,15 +43,26 @@
 //     age: 20
 // });
 // ------------------------Types----------------------------------------
-type User = {
-    firstName: String;
-    lastName: String;
-    age: number;
-}
+// type User = {
+//     firstName: String;
+//     lastName: String;
+//     age: number;
+// }
 
-type StringOrNumber = String | Number;
-function printId(id: StringOrNumber) {
-    console.log(id);
-}  
-printId(113);
-printId("113");
+// type StringOrNumber = String | Number;
+// function printId(id: StringOrNumber) {
+//     console.log(id);
+// }
+// printId(113);
+// printId("113");
+// -----------------------------Arrays In TS-------------------------------
+function maxValue(arr: number[]) {
+    let max = 0;
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+console.log(maxValue([1, 2, 3]));
