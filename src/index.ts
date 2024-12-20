@@ -67,17 +67,24 @@
 // }
 // console.log(maxValue([1, 2, 3]));
 // -----------------------------Enums--------------------------------------
-enum Direction {
-    Up,
-    Down,
-    Left,
-    Right
-}
+// enum Direction {
+//     Up,
+//     Down,
+//     Left,
+//     Right
+// }
 
-function doSomething(keyPressed: Direction) {
-    if (keyPressed == Direction.Up) {
+// function doSomething(keyPressed: Direction) {
+//     if (keyPressed == Direction.Up) {
         
-    }
+//     }
+// }
+// doSomething(Direction.Up);
+// doSomething(Direction.Down);
+// ---------------------------Generics----------------------------------------
+function identity<T>(arg: T):T {
+    return arg;
 }
-doSomething(Direction.Up);
-doSomething(Direction.Down);    
+let output1 = identity<String>("Niraj");
+let output2 = identity<number>(100);
+console.log(output1.toUpperCase());
